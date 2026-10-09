@@ -2,6 +2,10 @@
 
 An archived study of spatial reduction, grey-level quantisation and image distortion, preserved through figures and code screenshots.
 
+![Grey-level quantisation comparison from the original coursework.](assets/lenna_niveaux_de_quantification.png)
+
+*Grey-level quantisation comparison from the original coursework.*
+
 ## Available figures
 
 | Location | Content |
