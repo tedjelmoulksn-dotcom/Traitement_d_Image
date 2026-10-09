@@ -17,7 +17,7 @@ The filtering reports provide the separate coursework on local spatial operators
 
 ## Available evidence
 
-The archive contains figures and documents, not a complete runnable image-processing codebase. Code screenshots preserve implementation details but are not a substitute for source files or a reproducible environment. No source archive is currently present.
+The available evidence is organised as method captures, processed-image examples and working reports. Use the code screenshots to follow the operations and the error plots to compare their effects; executable reconstruction requires transcribing the method into a chosen environment.
 
 ## Reviewing the material
 
@@ -30,7 +30,9 @@ Start with the quantisation module README, inspect the corresponding figures, th
 
 ## Reproducibility
 
-No new MSE/PSNR values or filter comparisons were computed during this README update. A reproducible continuation should add scripts, input licensing information, dependencies and exact parameter settings.
+A meaningful image comparison fixes the input, intensity range, channel treatment and boundary rules before changing an algorithm parameter. Quantisation error and spatial reduction should be evaluated separately so that PSNR reflects the operation being studied.
+
+A reproducible continuation stores the executable method, input provenance, dependencies and parameter settings beside each comparison figure.
 
 ## Licence
 
