@@ -1,6 +1,10 @@
 # Image Processing — Quantisation and Filtering Studies
 
-Academic image-processing material covering sampling, grey-level quantisation, distortion metrics and spatial/frequency-domain filtering.
+Image-processing studies in quantisation, error metrics and spatial/frequency filtering.
+
+![Original quantisation study: the same image represented with fewer grey levels.](Traitement_Image_Quantification/assets/lenna_niveaux_de_quantification.png)
+
+*Original quantisation study: the same image represented with fewer grey levels.*
 
 ## Repository map
 
