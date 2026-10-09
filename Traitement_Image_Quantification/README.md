@@ -1,52 +1,35 @@
-# Traitement d'image — quantification et échantillonnage
+# Image Sampling and Quantisation Study
 
-## Vue d'ensemble
-TP de traitement d'image (formation 2023–2026) portant sur la quantification des niveaux de gris, la mesure de qualité (EQM, PSNR), le bruit et la réduction de résolution, sur l'image de test Lenna.
+An archived study of spatial reduction, grey-level quantisation and image distortion, preserved through figures and code screenshots.
 
-## Objectifs
-- Quantifier une image avec différents pas et observer l'effet visuel.
-- Tracer l'erreur quadratique moyenne et le PSNR en fonction du pas de quantification.
-- Étudier l'ajout de bruit et le sous-échantillonnage (réduction d'un facteur 2).
+## Available figures
 
-## Architecture
-Résultats et captures du code dans `assets/` :
-- `lenna_niveaux_de_quantification.png`, `lenna_bruitee.png`, `lenna_reduite_2_fois.png`
-- `eqm_fonction_pas_quantification.png`, `psnr_fonction_pas_quantification.png`
-- `code_quantification.png`, `code_eqm_psnr.png`, `code_echantillonnage.png`, `code_reduction_image.png`
+| Location | Content |
+|---|---|
+| [`assets/code_echantillonnage.png`](assets/code_echantillonnage.png) | Sampling code capture |
+| [`assets/code_quantification.png`](assets/code_quantification.png) | Quantisation code capture |
+| [`assets/code_eqm_psnr.png`](assets/code_eqm_psnr.png) | MSE/PSNR code capture |
+| [`assets/lenna_niveaux_de_quantification.png`](assets/lenna_niveaux_de_quantification.png) | Quantisation comparison |
+| [`assets/lenna_reduite_2_fois.png`](assets/lenna_reduite_2_fois.png) | Spatial reduction |
+| [`assets/lenna_bruitee.png`](assets/lenna_bruitee.png) | Noisy image example |
+| [All figures](assets/) | Additional code and error plots |
 
-## Matériel
-Aucun.
+## Metrics
 
-## Logiciel
-À documenter (langage du TP visible sur les captures de code).
+For aligned images, MSE is the average squared pixel difference. PSNR is `10*log10(MAX^2/MSE)`, where `MAX` must match the intensity representation. For unsigned 8-bit intensity data, `MAX = 255`; normalised floating-point images require a different peak convention.
 
-## Implémentation
-Le code source est conservé dans une archive RAR non extraite ; seules les captures du code sont présentes pour l'instant.
+Compute differences in a suitable numeric type to avoid unsigned subtraction artifacts.
 
-## Principes d'ingénierie
-- Compromis nombre de niveaux / qualité (EQM, PSNR).
-- Repliement spectral lors du sous-échantillonnage.
+## Interpretation
 
-## Résultats
-Voir les courbes EQM/PSNR et les images dans `assets/`.
+Fewer intensity levels generally increase quantisation distortion. Spatial downsampling is a separate operation and should include an explicit treatment of aliasing. Compare images using the same size, intensity scale and colour representation.
 
-## Difficultés / limites
-Scripts sources à ajouter (archive RAR à extraire manuellement dans `src/`).
+## Archive status
 
-## Structure
-```
-Traitement_Image_Quantification/
-├── README.md
-├── .gitignore
-└── assets/
-```
+Only screenshots and result figures are currently included. There are no executable scripts or source archive, so the module is not directly runnable. Reproduction requires transcribing or reimplementing the method and documenting input provenance and parameters.
 
-## Exécution
-À documenter.
+No new PSNR/MSE values were computed for this README update.
 
-## Médias
-![PSNR](assets/psnr_fonction_pas_quantification.png)
-![Quantification](assets/lenna_niveaux_de_quantification.png)
+## Licence
 
-## Compétences
-Traitement d'image, quantification, métriques EQM/PSNR, échantillonnage.
+No project-wide licence has been defined. Original images and reports retain their own attribution.
