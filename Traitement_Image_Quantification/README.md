@@ -26,9 +26,9 @@ Fewer intensity levels generally increase quantisation distortion. Spatial downs
 
 ## Archive status
 
-Only screenshots and result figures are currently included. There are no executable scripts or source archive, so the module is not directly runnable. Reproduction requires transcribing or reimplementing the method and documenting input provenance and parameters.
+The module preserves the method through code captures and processed-image figures. To reproduce it, transcribe the operations into a chosen environment and keep the input image, numeric representation and parameter values with the resulting figures.
 
-No new PSNR/MSE values were computed for this README update.
+Read the error plots against quantisation step, using the same reference image and intensity convention for every point.
 
 ## Licence
 
