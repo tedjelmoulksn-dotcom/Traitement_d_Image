@@ -10,6 +10,7 @@ Python experiments in image representation, contrast enhancement, edge detection
 | --- | --- | --- |
 | TP1 — Image analysis | Pixel arrays and colour spaces in the report; executable contrast, histogram equalisation, CLAHE, gradient/Laplacian and kernel-response experiments | [TP1 guide](labs/tp1_image_analysis/README.md) |
 | TP2 — Spatial and frequency filtering | Convolution versus correlation, boundary handling, smoothing operators, centred spectra and circular low/high-pass masks | [TP2 guide](labs/tp2_filtering/README.md) |
+| TP3 — Edge detection | Sobel, Prewitt, Roberts and Laplacian captures; shared executable derivative experiments | [TP3 guide](labs/tp3_edge_detection/README.md) |
 | Sampling and quantisation | Archived resampling experiments; runnable uniform quantisation with MSE and PSNR | [Quantisation guide](labs/sampling_quantisation/README.md) |
 
 ## Run locally
@@ -31,11 +32,15 @@ Scripts save PNG figures under `outputs/<laboratory>/<script>/` without opening 
 
 ## Repository layout
 
-- `labs/`: three laboratory guides, executable scripts, original reports and archived figures.
+- `labs/`: four laboratory guides, executable scripts, original reports and archived figures.
 - `data/input/`: six shared images, stored once and resolved independently of the shell's working directory by the runtime helper.
 - `image_lab/`: shared plotting, metric, quantisation and Fourier-mask functions.
 - `tests/`: numerical invariants for quantisation, unsigned arithmetic, FFT reconstruction and cross-library convolution equivalence.
 - [Archive map](docs/ARCHIVE_MAP.md): source filenames, destination paths and the distinction between recovered code and reconstructed implementations.
+
+## Additional evidence from `cle`
+
+A content-hash comparison of 92 files in the image-processing folder identified 38 additional captures: 9 image-representation figures, 12 contrast/equalisation captures, 4 TP3 derivative figures, 11 sampling/quantisation captures and 2 smoothing-filter captures. Existing images and the TP2 archive were consolidated rather than copied again. Four regression/Iris-classification scripts found under `diagnostic` concern data analysis and are listed separately in the [Drive comparison](docs/CLE_IMAGE_REVIEW.md).
 
 ## Numerical conventions
 

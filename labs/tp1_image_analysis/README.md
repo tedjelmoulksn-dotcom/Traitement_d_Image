@@ -46,3 +46,10 @@ For `skimage.io.imread`, `as_gray=True` requests grayscale conversion. Colour im
 ## Evidence and provenance
 
 `assets/` contains the recovered TP1 screenshots. These illustrate the original exercise session; plots produced by the runnable scripts are saved separately in `outputs/`. See the [archive map](../../docs/ARCHIVE_MAP.md) for the original `sanstitre*.py` filenames and changes made for execution.
+
+## Additional captures recovered from `cle`
+
+- `assets/representation/`: Lenna dimensions and loading, HSV channel extraction, sinusoidal patterns for several `d` values, and a corresponding FFT capture. [HSV channels](assets/representation/hsv_channels.png) and the [sinusoid/FFT pair](assets/representation/sinusoid_fft_period_32.png) extend the evidence for the report's image-representation exercises.
+- `assets/contrast/`: input histograms, global equalisation, CLAHE images and the corresponding code and console captures. [CLAHE image comparison](assets/contrast/clahe_images.png) accompanies the existing executable equalisation experiment.
+
+These contrast captures originally lived under `tp2/partie C` in Drive and are grouped here with the repository's contrast/equalisation scripts. Some historical console values show Michelson contrast above one, consistent with the original unsigned arithmetic. The current helper converts extrema to floating point before evaluation; use the current script outputs for numerical comparisons. Original captures are retained as session evidence, with their bytes unchanged.

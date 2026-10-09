@@ -29,3 +29,9 @@ The sampling code is preserved in [screenshots](assets/sampling_code.png) and [r
 ## Evidence
 
 `assets/` groups the original quantisation code, MSE/PSNR plots, noisy-image capture and recovered resampling figures. Archived screenshots are historical evidence; newly generated figures stay in `outputs/`.
+
+## Additional sampling and metric evidence
+
+`assets/evidence/` adds the original grayscale-level count, sampled-image dimensions, repeated downsampling captures, quantisation comparison with metric annotations, and the historical noise/PSNR console output. The [five-step downsampling result](assets/evidence/downsampling_five_steps_result.png) reaches a 16×16 image from the 512×512 source, as shown by the [dimension trace](assets/evidence/downsampling_five_steps_shape.png).
+
+The [quantisation comparison](assets/evidence/quantisation_with_mse.png) preserves the values printed by the original session. These historical annotations are separate from the current floating-point MSE/PSNR implementation and are not substituted for its outputs. The noise console records the original salt-and-pepper, Gaussian and scintillation labels; it is an archived observation, not a new executable noise experiment.
