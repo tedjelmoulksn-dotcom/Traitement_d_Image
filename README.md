@@ -1,16 +1,30 @@
-# Traitement d'image
+# Image Processing Laboratories
 
-TP de traitement d'image du cycle ingénieur Instrumentation (Sup Galilée, 2024).
+Python laboratory collection for image analysis, contrast enhancement, spatial and frequency-domain filtering, edge detection, sampling and quantisation. Shared operations support reproducible demonstrations and unit tests.
 
-| Dossier | Contenu | Outils |
-|---|---|---|
-| [`quantification_psnr/`](quantification_psnr/) | Quantification de l'image Lenna, EQM et PSNR en fonction du pas, bruit, sous-échantillonnage (captures) | voir README du dossier |
-| [`filtrage_spatial_frequentiel/`](filtrage_spatial_frequentiel/) | Comptes rendus : lecture d'images, espaces de couleurs RGB/LAB/HSV, niveaux de gris, transformée de Fourier, filtrage spatial (convolution avec différents noyaux), détection de contours, filtrage fréquentiel avec OpenCV | Python : NumPy, Matplotlib, scikit-image, OpenCV |
+## Repository guide
 
-## Compétences
-Quantification, métriques de qualité (EQM, PSNR), filtrage spatial et fréquentiel, transformée de Fourier 2D.
+| Location | Contents |
+|---|---|
+| [labs/](labs/) | Study scripts, reports and figures |
+| [image_lab/](image_lab/) | Shared image operations and runtime helpers |
+| [data/](data/) | Input images and dataset notes |
+| [tests/](tests/) | Image-operation tests |
+| [docs/](docs/) | Reports and source mapping |
+| [archive/](archive/) | Original script variants and source package |
 
-## Remarques
-- Les scripts Python du filtrage ne sont pas conservés : le code apparaît dans les comptes rendus.
-- Les scripts de `quantification_psnr/` sont dans une archive RAR à extraire dans `quantification_psnr/src/`.
-- Aucune licence n'a été définie.
+## Getting started
+
+From the repository root:
+
+```bash
+python -m pip install -r requirements.txt
+make test
+python -m labs.tp2_filtering.src.frequency_filtering
+```
+
+Use `make demos` to run the complete demonstration set.
+
+## Project context
+
+Runnable labs are separate from original captures and earlier script variants. The Iris machine-learning exercises are grouped in the data-analysis repository.
