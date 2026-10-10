@@ -1,16 +1,29 @@
-# Traitement d'image
+# Image Processing Laboratory
 
-TP de traitement d'image du cycle ingénieur Instrumentation (Sup Galilée, 2024).
+Python experiments exploring image representation, intensity transforms, spatial and frequency filtering, and edge detection. Shared functions are separated from laboratory entry points, datasets and reports.
 
-| Dossier | Contenu | Outils |
-|---|---|---|
-| [`quantification_psnr/`](quantification_psnr/) | Quantification de l'image Lenna, EQM et PSNR en fonction du pas, bruit, sous-échantillonnage (captures) | voir README du dossier |
-| [`filtrage_spatial_frequentiel/`](filtrage_spatial_frequentiel/) | Comptes rendus : lecture d'images, espaces de couleurs RGB/LAB/HSV, niveaux de gris, transformée de Fourier, filtrage spatial (convolution avec différents noyaux), détection de contours, filtrage fréquentiel avec OpenCV | Python : NumPy, Matplotlib, scikit-image, OpenCV |
+## Laboratory guide
 
-## Compétences
-Quantification, métriques de qualité (EQM, PSNR), filtrage spatial et fréquentiel, transformée de Fourier 2D.
+| Folder | Topics |
+| --- | --- |
+| [Sampling and quantisation](labs/sampling_quantisation/) | Spatial sampling and intensity quantisation |
+| [TP1: image analysis](labs/tp1_image_analysis/) | Contrast, histogram equalisation, kernels and Fourier analysis |
+| [TP2: filtering](labs/tp2_filtering/) | Smoothing, spatial operators and frequency-domain filtering |
+| [TP3: edge detection](labs/tp3_edge_detection/) | Available experiment captures and guide |
 
-## Remarques
-- Les scripts Python du filtrage ne sont pas conservés : le code apparaît dans les comptes rendus.
-- Les scripts de `quantification_psnr/` sont dans une archive RAR à extraire dans `quantification_psnr/src/`.
-- Aucune licence n'a été définie.
+[image_lab](image_lab/) contains reusable operations and runtime support. [data/input](data/input/) holds the demonstration images; laboratory folders contain their reports and results. [archive](archive/) preserves original code variants and source archives.
+
+## Run
+
+Install the Python dependencies from the repository root:
+
+```sh
+python -m pip install -r requirements.txt
+python -m labs.tp2_filtering.src.frequency_filtering
+```
+
+Module execution keeps shared imports and relative resource paths consistent. A graphical environment is needed for interactive figure windows.
+
+Use `make demos` for the configured examples and `make test` for the shared-operation tests. These checks cover the implemented Python functions, not the correctness of every historical report or capture.
+
+TP3 currently contains supporting material rather than a complete runnable edge-detection lab. The distinction is documented in its guide.
