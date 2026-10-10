@@ -2,6 +2,10 @@
 
 Python experiments exploring image representation, intensity transforms, spatial and frequency filtering, and edge detection. Shared functions are separated from laboratory entry points, datasets and reports.
 
+![Traitement d Image project overview](labs/tp2_filtering/assets/spatial/operator_comparison.png)
+
+*Archived spatial-filtering comparison: original flower image and filtered outputs.*
+
 ## Laboratory guide
 
 | Folder | Topics |
